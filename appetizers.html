@@ -1,49 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Appetizer Recipes</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf7f2;
+      color: #333;
+      line-height: 1.6;
+      padding-bottom: 50px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: #d45d50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #c04a3d;
+      padding: 10px 0;
+      text-align: center; /* Center the nav links */
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffebcd;
+      text-decoration: underline;
+    }
+
+    /* Main Content */
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .main-title {
+        text-align: center;
+        color: #c04a3d;
+        font-size: 2em;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #f0e4d7;
+        padding-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 25px;
+      border-left: 6px solid #d45d50;
+      background-color: #fffaf7;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    section img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    section > p {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #d45d50;
+      margin-bottom: 10px;
+      font-size: 1.6em;
+    }
+
+    h3 {
+      color: #555;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      font-size: 1.2em;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    ul, ol {
+      margin: 10px 0 10px 20px;
+      padding-left: 10px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+    
+    .pro-tip {
+        background-color: #e6f3ff;
+        border-left: 5px solid #5b9bd5;
+        padding: 12px;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 0.95em;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #eee;
+      background-color: #f8f8f8;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      main {
+        padding: 15px;
+        margin: 20px 10px;
+      }
+      section img {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Appetizer Recipes</h1>
 
-  <section>
-    <h2>Bruschetta</h2>
-    <h3>Ingredients:</h3>
-    <ul>
-      <li>1 baguette, sliced</li>
-      <li>2 cups cherry tomatoes, diced</li>
-      <li>2 cloves garlic, minced</li>
-      <li>Fresh basil leaves, chopped</li>
-      <li>2 tbsp olive oil</li>
-      <li>Salt and pepper to taste</li>
-    </ul>
-    <h3>Steps:</h3>
-    <ol>
-      <li>Toast baguette slices until golden brown.</li>
-      <li>Mix tomatoes, garlic, basil, olive oil, salt, and pepper in a bowl.</li>
-      <li>Spoon mixture onto toasted bread and serve immediately.</li>
-    </ol>
-  </section>
+  <!-- Header -->
+  <header>
+    <h1>🍽️ Appetizer Recipes</h1>
+  </header>
 
-  <section>
-    <h2>Stuffed Mushrooms</h2>
-    <h3>Ingredients:</h3>
-    <ul>
-      <li>12 large button mushrooms</li>
-      <li>1/2 cup cream cheese</li>
-      <li>1/4 cup grated Parmesan cheese</li>
-      <li>2 cloves garlic, minced</li>
-      <li>1 tbsp chopped parsley</li>
-      <li>Salt and pepper to taste</li>
-    </ul>
-    <h3>Steps:</h3>
-    <ol>
-      <li>Preheat oven to 180°C (350°F).</li>
-      <li>Remove stems from mushrooms and chop them finely.</li>
-      <li>Mix chopped stems with cream cheese, Parmesan, garlic, parsley, salt, and pepper.</li>
-      <li>Fill mushroom caps with mixture and bake for 20 minutes.</li>
-    </ol>
-  </section>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="appetizers.html">🍄 Appetizers</a>
+    <a href="desserts.html">🍰 Desserts</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2 class="main-title">Crowd-Pleasing Starters</h2>
+
+    <section>
+      <img src="https://img.freepik.com/premium-photo/rustic-wooden-board-lined-with-freshly-made-bruschetta_124507-138454.jpg" alt="Freshly made bruschetta on a wooden board">
+      <h2>Bruschetta</h2>
+      <p>A classic Italian appetizer that's simple, fresh, and bursting with the flavors of tomato, garlic, and basil.</p>
+      <h3>Ingredients:</h3>
+      <ul>
+        <li>1 baguette, sliced into 1-inch rounds</li>
+        <li>2 cups cherry tomatoes, diced</li>
+        <li>2 cloves garlic, minced (plus 1 whole clove, halved)</li>
+        <li>1/4 cup fresh basil leaves, chopped</li>
+        <li>2 tbsp extra virgin olive oil</li>
+        <li>Salt and freshly ground black pepper to taste</li>
+      </ul>
+      <h3>Steps:</h3>
+      <ol>
+        <li>Preheat oven to 190°C (375°F). Toast baguette slices on a baking sheet until golden brown.</li>
+        <li>Lightly rub the surface of the toasted bread with the halved garlic clove for extra flavor.</li>
+        <li>In a bowl, mix diced tomatoes, minced garlic, basil, olive oil, salt, and pepper.</li>
+        <li>Spoon the mixture generously onto each toasted slice.</li>
+        <li>Serve immediately for the best texture and flavor.</li>
+      </ol>
+      <div class="pro-tip">
+        <strong>Pro-Tip:</strong> For an extra touch of elegance, drizzle a high-quality balsamic glaze over the top just before serving.
+      </div>
+    </section>
+
+    <section>
+      <img src="https://th.bing.com/th/id/R.b9a5ad128405fd2e04834c633f2598a0?rik=VnfPIKy%2b6H0ihQ&pid=ImgRaw&r=0" alt="Warm stuffed mushrooms on a baking dish">
+      <h2>Stuffed Mushrooms</h2>
+      <p>A savory and satisfying appetizer, these mushrooms are filled with a creamy, cheesy, and garlicky mixture.</p>
+      <h3>Ingredients:</h3>
+      <ul>
+        <li>12 large button or cremini mushrooms</li>
+        <li>1/2 cup cream cheese, softened</li>
+        <li>1/4 cup grated Parmesan cheese</li>
+        <li>2 cloves garlic, minced</li>
+        <li>2 tbsp chopped fresh parsley</li>
+        <li>1 tbsp breadcrumbs (optional, for topping)</li>
+        <li>Salt and pepper to taste</li>
+      </ul>
+      <h3>Steps:</h3>
+      <ol>
+        <li>Preheat oven to 180°C (350°F). Lightly grease a baking sheet.</li>
+        <li>Carefully remove stems from mushrooms. Finely chop the stems.</li>
+        <li>In a bowl, combine chopped stems, cream cheese, Parmesan, garlic, and parsley. Season with salt and pepper.</li>
+        <li>Stuff each mushroom cap generously with the mixture. Sprinkle breadcrumbs on top if desired.</li>
+        <li>Place on the baking tray and bake for 18–20 minutes until the mushrooms are tender and the filling is golden.</li>
+        <li>Serve warm and enjoy!</li>
+      </ol>
+    </section>
+
+    <section>
+      <img src="https://th.bing.com/th/id/R.79143bbd6f0a3f04a504421b6e050cd9?rik=J1jFy1NBAb3E%2fw&pid=ImgRaw&r=0" alt="Colorful caprese skewers with balsamic glaze">
+      <h2>Caprese Skewers</h2>
+      <p>A beautiful, no-cook appetizer that showcases the fresh flavors of Italy. Perfect for a quick and easy party snack.</p>
+      <h3>Ingredients:</h3>
+      <ul>
+        <li>1 pint cherry tomatoes</li>
+        <li>1 container (8 oz) fresh mozzarella balls (bocconcini)</li>
+        <li>1 bunch fresh basil leaves</li>
+        <li>2 tbsp extra virgin olive oil</li>
+        <li>1 tbsp balsamic glaze</li>
+        <li>Salt and pepper to taste</li>
+        <li>Small wooden skewers</li>
+      </ul>
+      <h3>Steps:</h3>
+      <ol>
+        <li>On each skewer, thread one cherry tomato, one basil leaf (folded), and one mozzarella ball.</li>
+        <li>Repeat the pattern until the skewer is full, leaving a little space at each end.</li>
+        <li>Arrange the finished skewers on a serving platter.</li>
+        <li>Just before serving, drizzle with olive oil and balsamic glaze.</li>
+        <li>Season lightly with salt and freshly ground black pepper.</li>
+      </ol>
+      <div class="pro-tip">
+        <strong>Pro-Tip:</strong> To intensify the flavor, you can marinate the mozzarella balls in olive oil, garlic, and herbs for 30 minutes before assembling.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Recipe Hub | University of Kelaniya - Full Stack Development</p>
+    <p>Created by: PS/2021/166</p>
+  </footer>
+
 </body>
 </html>
